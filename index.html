@@ -2455,7 +2455,27 @@
         form.action = 'https://automacao.bagents.cloud/webhook/373daf44-15f9-4b7c-8f61-07d0df3c3582';
         form.target = 'webhookFrame';
 
-        const fields = { name, email, phone };
+        // Captura parâmetros UTM da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const utm_source = urlParams.get('utm_source') || '';
+        const utm_medium = urlParams.get('utm_medium') || '';
+        const utm_campaign = urlParams.get('utm_campaign') || '';
+        const utm_term = urlParams.get('utm_term') || '';
+        const utm_content = urlParams.get('utm_content') || '';
+
+        // Data e hora de preenchimento do formulário
+        const now = new Date();
+        const submitted_at = now.toLocaleString('pt-BR', {
+          timeZone: 'America/Sao_Paulo',
+          day: '2-digit', month: '2-digit', year: 'numeric',
+          hour: '2-digit', minute: '2-digit', second: '2-digit'
+        });
+
+        const fields = {
+          name, email, phone, phone_clean: phone.replace(/\D/g, ''),
+          utm_source, utm_medium, utm_campaign, utm_term, utm_content,
+          submitted_at
+        };
         for (const [key, val] of Object.entries(fields)) {
           const input = document.createElement('input');
           input.type = 'hidden';
@@ -2475,7 +2495,11 @@
         // silently continue — redirect anyway
       }
 
-      window.location.href = 'https://sun.eduzz.com/KW8Z2BQR01';
+      const checkoutUrl = new URL('https://sun.eduzz.com/KW8Z2BQR01');
+      checkoutUrl.searchParams.set('nome', name);
+      checkoutUrl.searchParams.set('email', email);
+      checkoutUrl.searchParams.set('phone', phone.replace(/\D/g, ''));
+      window.location.href = checkoutUrl.toString();
     }
   </script>
 
