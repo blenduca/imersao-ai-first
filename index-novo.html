@@ -4,25 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imersão AI First para Mentores — Blenduca</title>
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1711695262645276');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1711695262645276&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -436,48 +417,6 @@ Actually .hero is inside <section> but .hero IS the child. */
   .ment-grid { grid-template-columns: 1fr !important; }
 }
 
-/* ── FAQ ── */
-.faq-list{max-width:720px;margin:56px auto 0;display:flex;flex-direction:column;gap:10px}
-.faq-item{background:var(--s2);border:1px solid var(--b);border-radius:10px;overflow:hidden;transition:border-color .2s}
-.faq-item.open{border-color:var(--rb)}
-.faq-q{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px;font-family:var(--fh);font-weight:700;font-size:14px;color:#fff;user-select:none}
-.faq-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(229,39,42,.1);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:.65rem;transition:transform .3s}
-.faq-item.open .faq-icon{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 26px}
-.faq-item.open .faq-a{max-height:280px;padding:0 26px 22px}
-.faq-a p{font-size:14px;color:var(--m);line-height:1.85}
-
-/* ── MODAL ── */
-.modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .35s ease;padding:20px}
-.modal-overlay.active{opacity:1;visibility:visible}
-.modal-box{background:#121212;border:1px solid var(--rb);border-radius:18px;padding:44px 40px;max-width:480px;width:100%;position:relative;transform:translateY(30px) scale(.96);transition:all .35s ease;box-shadow:0 32px 80px rgba(0,0,0,.6),0 0 0 1px rgba(220,38,38,.1);overflow:hidden}
-.modal-overlay.active .modal-box{transform:translateY(0) scale(1)}
-.modal-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent)}
-.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.03);border:1px solid var(--b);color:var(--m);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:1.1rem}
-.modal-close:hover{border-color:var(--red);color:#fff;background:rgba(229,39,42,.06)}
-.modal-title{font-family:var(--fh);font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3}
-.modal-subtitle{font-size:14px;color:var(--m);margin-bottom:28px;line-height:1.6}
-.modal-form{display:flex;flex-direction:column;gap:16px}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group label{font-family:var(--fh);font-size:11px;font-weight:700;color:#e6e6f0;letter-spacing:.06em;text-transform:uppercase}
-.form-group input{background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:14px 16px;font-family:var(--fb);font-size:14px;color:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
-.form-group input::placeholder{color:rgba(255,255,255,.25)}
-.form-group input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(220,38,38,.16)}
-.modal-submit{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:15px;padding:17px 38px;border-radius:10px;border:none;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;letter-spacing:.03em;margin-top:8px;width:100%}
-.modal-submit::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1) 0%,transparent 55%)}
-.modal-submit:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(232,37,58,.38);background:var(--rd)}
-.modal-submit:disabled{opacity:.6;cursor:not-allowed;transform:none!important;box-shadow:none!important}
-.modal-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--m);margin-top:4px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
-@media(max-width:500px){.modal-box{padding:32px 24px}.modal-title{font-size:1.15rem}}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.anim{opacity:0}
-.anim.in{animation:fadeUp .6s ease forwards}
-.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
-
 </style>
 
 
@@ -488,7 +427,7 @@ Actually .hero is inside <section> but .hero IS the child. */
 <nav>
   <div class="nav-in">
     <a href="#" class="nav-logo" style="display:flex;align-items:center;padding:4px 0;"><img src="logo.png" alt="Blenduca" style="height:26px;width:auto;" /></a>
-    <button type="button" onclick="openModal()" class="nav-btn">Garantir Minha Vaga <i data-lucide="arrow-right" class="icon-inline"></i></button>
+    <a href="#cta" class="nav-btn">Garantir Minha Vaga <i data-lucide="arrow-right" class="icon-inline"></i></a>
   </div>
 </nav>
 
@@ -521,7 +460,7 @@ Actually .hero is inside <section> but .hero IS the child. */
         Em uma tarde, descubra como Claude, Gemini e NotebookLM assumem o operacional — e devolvem presença, energia e tempo para o que&nbsp;importa.
       </p>
 
-      <button type="button" onclick="openModal()" class="btn">Quero Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></button>
+      <a href="#cta" class="btn">Quero Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></a>
       <div class="ctameta">
         <strong>R$ 97 · Garantia de 7 dias</strong>
         Sábado, 11 de abril · 14h às 18h · Online
@@ -882,7 +821,7 @@ Actually .hero is inside <section> but .hero IS the child. */
       </div>
       <div class="inv-urgency"><div class="bdot"></div>Inscrições encerram 10 de abril — sem lista de espera</div>
       <br>
-      <button type="button" onclick="openModal()" class="btn btn-lg">SIM! Quero Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></button>
+      <a href="#" class="btn btn-lg">SIM! Quero Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></a>
       <div class="inv-trust" style="margin-top:14px"><i data-lucide="lock" style="width:14px;height:14px" class="icon-inline"></i> Pagamento seguro via Eduzz &nbsp;·&nbsp; <i data-lucide="check-circle" style="width:14px;height:14px;color:var(--red)" class="icon-inline"></i> Garantia 7 dias &nbsp;·&nbsp; <i data-lucide="zap" style="width:14px;height:14px;color:var(--red)" class="icon-inline"></i> Acesso imediato</div>
     </div>
   </div>
@@ -967,7 +906,7 @@ Actually .hero is inside <section> but .hero IS the child. */
             <div class="choice-text">Nada muda. Em 6 meses você vê um colega escalar com IA e pensa: "eu precisava ter feito antes."</div>
           </div>
         </div>
-        <button type="button" onclick="openModal()" class="btn btn-lg">Garantir Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></button>
+        <a href="#cta" class="btn btn-lg">Garantir Minha Vaga <span class="ar"><i data-lucide="arrow-right" class="icon-inline"></i></span></a>
         <div class="final-trust">
           <span><i data-lucide="lock" style="width:14px;height:14px" class="icon-inline"></i> Pagamento seguro</span>
           <span><i data-lucide="check-circle" style="width:14px;height:14px;color:var(--red)" class="icon-inline"></i> Garantia 7 dias</span>
@@ -978,7 +917,6 @@ Actually .hero is inside <section> but .hero IS the child. */
     </div>
   </div>
 </section>
-
 
 <footer>
   <div class="wrap">
@@ -992,152 +930,14 @@ Actually .hero is inside <section> but .hero IS the child. */
   </div>
 </footer>
 
-<!-- ══ MODAL ══════════════════════════════ -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()" aria-label="Fechar">
-      <i data-lucide="x" style="width:18px;height:18px;"></i>
-    </button>
-    <p class="modal-title">Garanta sua vaga na <span style="color:var(--red)">Imersão AI First</span></p>
-    <p class="modal-subtitle">Preencha seus dados para garantir sua vaga por apenas <strong style="color:#fff">R$ 97</strong></p>
-    <form class="modal-form" id="modalForm" onsubmit="submitForm(event)">
-      <div class="form-group">
-        <label for="modal-name">Nome completo</label>
-        <input type="text" id="modal-name" name="name" placeholder="Seu nome completo" required />
-      </div>
-      <div class="form-group">
-        <label for="modal-email">E-mail</label>
-        <input type="email" id="modal-email" name="email" placeholder="seu@email.com" required />
-      </div>
-      <div class="form-group">
-        <label for="modal-phone">Telefone</label>
-        <input type="tel" id="modal-phone" name="phone" placeholder="(00) 00000-0000" required />
-      </div>
-      <button type="submit" class="modal-submit" id="modalSubmitBtn">
-        GARANTIR MINHA VAGA →
-      </button>
-      <div class="modal-secure">
-        <i data-lucide="lock" class="icon-inline"></i> Seus dados estão seguros
-      </div>
-    </form>
-  </div>
-</div>
-
 <script>
-// ── Scroll suave para #cta ──
 document.querySelectorAll('a[href="#cta"]').forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
     document.getElementById('cta').scrollIntoView({behavior:'smooth'});
   });
 });
-
-// ── Animações de scroll ──
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-document.querySelectorAll('.anim').forEach(el => obs.observe(el));
-
-// ── FAQ ──
-function faq(el) {
-  const item = el.closest('.faq-item');
-  const open = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!open) item.classList.add('open');
-}
-
-// ── Modal ──
-function openModal() {
-  document.getElementById('modalOverlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-  setTimeout(() => document.getElementById('modal-name').focus(), 400);
-}
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('active');
-  document.body.style.overflow = '';
-}
-function closeModalOutside(e) {
-  if (e.target === e.currentTarget) closeModal();
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// ── Phone mask ──
-document.getElementById('modal-phone').addEventListener('input', function (e) {
-  let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-  if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
-  else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
-  else if (v.length > 0) v = `(${v}`;
-  e.target.value = v;
-});
-
-// ── Submit (webhook + Meta Pixel Lead + Eduzz auto-fill) ──
-async function submitForm(e) {
-  e.preventDefault();
-  if (typeof fbq === 'function') fbq('track', 'Lead');
-  const btn = document.getElementById('modalSubmitBtn');
-  const name = document.getElementById('modal-name').value.trim();
-  const email = document.getElementById('modal-email').value.trim();
-  const phone = document.getElementById('modal-phone').value.trim();
-
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Enviando...';
-
-  try {
-    const iframe = document.createElement('iframe');
-    iframe.name = 'webhookFrame';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://automacao.bagents.cloud/webhook/373daf44-15f9-4b7c-8f61-07d0df3c3582';
-    form.target = 'webhookFrame';
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const utm_source = urlParams.get('utm_source') || '';
-    const utm_medium = urlParams.get('utm_medium') || '';
-    const utm_campaign = urlParams.get('utm_campaign') || '';
-    const utm_term = urlParams.get('utm_term') || '';
-    const utm_content = urlParams.get('utm_content') || '';
-
-    const now = new Date();
-    const submitted_at = now.toLocaleString('pt-BR', {
-      timeZone: 'America/Sao_Paulo',
-      day: '2-digit', month: '2-digit', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', second: '2-digit'
-    });
-
-    const fields = {
-      name, email, phone, phone_clean: phone.replace(/\D/g, ''),
-      utm_source, utm_medium, utm_campaign, utm_term, utm_content,
-      submitted_at
-    };
-    for (const [key, val] of Object.entries(fields)) {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = val;
-      form.appendChild(input);
-    }
-
-    document.body.appendChild(form);
-    form.submit();
-
-    await new Promise(r => setTimeout(r, 800));
-    iframe.remove();
-    form.remove();
-  } catch (err) {
-    // silently continue — redirect anyway
-  }
-
-  const checkoutUrl = new URL('https://sun.eduzz.com/KW8Z2BQR01');
-  checkoutUrl.searchParams.set('nome', name);
-  checkoutUrl.searchParams.set('email', email);
-  checkoutUrl.searchParams.set('phone', phone.replace(/\D/g, ''));
-  window.location.href = checkoutUrl.toString();
-}
 </script>
-
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
 </body>
